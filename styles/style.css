@@ -11,7 +11,7 @@ body {
   margin: auto;
   background-color: #f4f7ff;
 }
-main{
+main {
   gap: 24px;
 }
 .left {
@@ -66,7 +66,7 @@ nav {
   padding: 12px 12px;
   border-radius: 32px;
 }
-.themeImageBtn{
+.themeImageBtn {
   border: none;
 }
 .devBoard {
@@ -133,13 +133,14 @@ main {
   text-align: start;
 }
 .row3 {
-  width: 30%;
+  width: 33%;
   background-color: #f4f7ff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px 20px;
   border-radius: 12px;
+  gap: 20px;
 }
 .calender {
   background-color: white;
@@ -219,22 +220,22 @@ main {
   border-radius: 8px;
   color: white;
 }
-.activity{
+.activity {
   display: flex;
   align-items: center;
   gap: 17px;
   padding: 20px 20px 15px 20px;
   margin-left: 100px;
 }
-.activity h2{
+.activity h2 {
   font-size: 20px;
   font-weight: 500;
 }
-.clearHistory{
+.clearHistory {
   margin-left: 120px;
   padding: 20px 20px;
 }
-#clearBtn{
+#clearBtn {
   background-color: #3752fd;
   padding: 10px 20px;
   font-size: 16px;
@@ -242,4 +243,10 @@ main {
   border: none;
   border-radius: 8px;
   color: white;
+}
+#historyContainer {
+  margin: 20px 20px;
+  padding: 20px 20px;
+  background-color: #f4f7ff;
+  border-radius: 8px;
 }

@@ -12,8 +12,16 @@ document.getElementById("h3dBtn").addEventListener("click", function () {
   window.location.href = "blogs.html";
 });
 
+// live date and time
+window.onload = function () {
+  let currentDate = new Date();
+  let dateString = currentDate.toDateString();
 
+  // 'currentDate'
+  document.getElementById("currentDate").textContent = dateString;
+};
 
+// 6 button click done
 let totalButtons = document.querySelectorAll(".completedBtn").length; // Total 6 buttons
 let clickedButtons = 0; // Track number of clicks
 
@@ -38,6 +46,24 @@ function updateTaskCount(event) {
 
     clickedButtons++;
 
+    //  row4's h2 text and current date & time
+    let row4H2Text = event.target
+      .closest(".row4")
+      .querySelector("h2").innerText;
+    let currentDate = new Date();
+    let dateString = currentDate.toLocaleString();
+
+    //new history log
+    let historyContainer = document.getElementById("historyContainer");
+    let historyLog = document.createElement("div");
+    historyLog.classList.add("historyLog");
+    historyLog.innerHTML = `
+        <p>You have Complete The Task ${row4H2Text} at ${dateString} </p>
+    `;
+
+    // Append the new log to the history container
+    historyContainer.appendChild(historyLog);
+
     // "Congratulations! Board updated successfully."
     if (clickedButtons === totalButtons) {
       alert("Congratulations! Board updated successfully.");
@@ -50,3 +76,11 @@ document.querySelectorAll(".completedBtn").forEach((btn) => {
     updateTaskCount(event);
   });
 });
+
+
+// history delete
+document.getElementById("clearBtn").addEventListener("click", function () {
+    let historyContainer = document.getElementById("historyContainer");
+    historyContainer.innerHTML = ""; // Clear all history logs
+});
+
