@@ -11,11 +11,18 @@ body {
   margin: auto;
   background-color: #f4f7ff;
 }
+main{
+  gap: 24px;
+}
 .left {
   width: 70%;
+  background-color: white;
+  border-radius: 16px;
 }
 .right {
   width: 30%;
+  background-color: white;
+  border-radius: 16px;
 }
 nav {
   display: flex;
@@ -65,7 +72,6 @@ nav {
   font-size: 35px;
 }
 main {
-  background-color: white;
   border-radius: 16px;
   margin: 20px 0;
   display: flex;
@@ -199,6 +205,30 @@ main {
 }
 
 #completedBtn {
+  background-color: #3752fd;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+.activity{
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 20px 20px 15px 20px;
+  margin-left: 100px;
+}
+.activity h2{
+  font-size: 20px;
+  font-weight: 500;
+}
+.clearHistory{
+  margin-left: 120px;
+  padding: 20px 20px;
+}
+#clearBtn{
   background-color: #3752fd;
   padding: 10px 20px;
   font-size: 16px;
