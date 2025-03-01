@@ -34,7 +34,7 @@ nav {
   font-weight: 300;
   font-size: 35px;
 }
-.backBtn {
+#backBtn {
   background-color: #3752fd;
   padding: 10px 20px;
   font-size: 16px;

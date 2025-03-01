@@ -66,6 +66,9 @@ nav {
   padding: 12px 12px;
   border-radius: 32px;
 }
+.themeImageBtn{
+  border: none;
+}
 .devBoard {
   padding-left: 6px;
   font-weight: 300;
@@ -121,10 +124,13 @@ main {
   padding: 2px 7px 0 7px;
   border: 1px dashed white;
 }
-.row2 h3 {
+.row2 #h3dBtn {
   font-weight: 500;
   font-size: 24px;
+  border: none;
+  background-color: transparent;
   color: white;
+  text-align: start;
 }
 .row3 {
   width: 30%;

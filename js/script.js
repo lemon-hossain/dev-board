@@ -1,4 +1,20 @@
-let totalButtons = document.querySelectorAll(".completedBtn").length;  // Total 6 buttons
+// bg color change
+let colors = ["#3752FD", "#780C28", "#FADA7A", "#AA60C8", "#D70654"];
+let index = 0;
+
+document.querySelector(".themeImage").addEventListener("click", function () {
+  document.body.style.backgroundColor = colors[index];
+  index = (index + 1) % colors.length;
+});
+
+// window.location.href = "blogs.html";
+document.getElementById("h3dBtn").addEventListener("click", function () {
+  window.location.href = "blogs.html";
+});
+
+
+
+let totalButtons = document.querySelectorAll(".completedBtn").length; // Total 6 buttons
 let clickedButtons = 0; // Track number of clicks
 
 function updateTaskCount(event) {
@@ -14,10 +30,10 @@ function updateTaskCount(event) {
 
     // Disable the clicked button
     event.target.disabled = true;
-    event.target.style.backgroundColor = "gainsboro"; 
-    event.target.style.cursor = "not-allowed"; 
+    event.target.style.backgroundColor = "gainsboro";
+    event.target.style.cursor = "not-allowed";
 
-    // Board Update Successfully" 
+    // Board Update Successfully"
     alert("Board Update Successfully");
 
     clickedButtons++;
