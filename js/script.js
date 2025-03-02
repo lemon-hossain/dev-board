@@ -22,7 +22,7 @@ window.onload = function () {
 };
 
 // 6 button click done
-let totalButtons = document.querySelectorAll(".completedBtn").length; // Total 6 buttons
+let totalButtons = document.querySelectorAll(".completedBtn").length;
 let clickedButtons = 0; // Track number of clicks
 
 function updateTaskCount(event) {
@@ -53,12 +53,14 @@ function updateTaskCount(event) {
     let currentDate = new Date();
     let dateString = currentDate.toLocaleString();
 
-    //new history log
+    // new history log
     let historyContainer = document.getElementById("historyContainer");
     let historyLog = document.createElement("div");
     historyLog.classList.add("historyLog");
     historyLog.innerHTML = `
-        <p>You have Complete The Task ${row4H2Text} at ${dateString} </p>
+        <p style="color: black; background-color: #F4F7FF; padding: 20px; margin: 20px;border-radius: 8px;">
+        You have Completed The Task ${row4H2Text} at ${dateString} 
+    </p>
     `;
 
     // Append the new log to the history container
@@ -77,10 +79,8 @@ document.querySelectorAll(".completedBtn").forEach((btn) => {
   });
 });
 
-
 // history delete
 document.getElementById("clearBtn").addEventListener("click", function () {
-    let historyContainer = document.getElementById("historyContainer");
-    historyContainer.innerHTML = ""; // Clear all history logs
+  let historyContainer = document.getElementById("historyContainer");
+  historyContainer.innerHTML = "";
 });
-
